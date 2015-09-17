@@ -1,6 +1,3 @@
-var Book = require('./book');
-var Cart = require('./cart');
-
 function DiscountPlan(plan) {
   this.plan = [];
 }
