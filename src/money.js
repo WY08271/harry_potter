@@ -12,8 +12,8 @@ Money.prototype.totalMoney = function(booklist){
   return totalMoney;
 };
 
-Money.prototype.actualMoney = function(totalMoney, discountPrice){
-  return totalMoney - discountPrice;
+Money.prototype.actualMoney = function(booklist, discountPrice){
+  return this.totalMoney(booklist) - discountPrice;
 };
 
 module.exports = Money;

@@ -63,15 +63,15 @@ DiscountPlan.prototype.getDiscountPrice = function(discount, item) {
 
 DiscountPlan.prototype.selection = function(item) {
   if (item === 2) {
-    return 0.95;
+    return 0.05;
   } else if (item === 3) {
-    return 0.9;
+    return 0.1;
   } else if (item === 4) {
-    return 0.8;
+    return 0.2;
   } else if (item === 5) {
-    return 0.75;
+    return 0.25;
   } else if (item === 1) {
-    return 1;
+    return 0;
   }
 };
 
