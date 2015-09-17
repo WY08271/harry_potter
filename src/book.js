@@ -1,6 +1,6 @@
 function Book(name, price) {
   this.name = name;
-  this.price = price || 8.00;
+  this.price = price;
 }
 
 module.exports = Book ;
