@@ -1,11 +1,11 @@
 'use _strict';
 
-var Money = require('../src/money.js');
+var Calculator = require('../src/calculator.js');
 
-describe('Money', function() {
-  var money;
+describe('Calculator', function() {
+  var calculator;
   beforeEach(function() {
-    money = new Money();
+    calculator = new Calculator();
   });
 
   describe('#totalMoney()', function() {
@@ -24,7 +24,7 @@ describe('Money', function() {
         count: 1
       }];
 
-      expect(money.totalMoney(input)).toBe(24);
+      expect(calculator.totalMoney(input)).toBe(24);
     });
   });
 
@@ -43,9 +43,9 @@ describe('Money', function() {
         price: 8.00,
         count: 1
       }];
-      var totalMoney = money.totalMoney(input);
+      var totalMoney = calculator.totalMoney(input);
 
-      expect(money.actualMoney(input, 10)).toBe(14);
+      expect(calculator.actualMoney(input, 10)).toBe(14);
     });
   });
 });

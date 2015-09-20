@@ -1,8 +1,8 @@
-function Money () {
+function Calculator () {
 
 }
 
-Money.prototype.totalMoney = function(booklist){
+Calculator.prototype.totalMoney = function(booklist){
   var totalMoney = 0;
 
   for(var i = 0; i < booklist.length; i++){
@@ -12,8 +12,8 @@ Money.prototype.totalMoney = function(booklist){
   return totalMoney;
 };
 
-Money.prototype.actualMoney = function(booklist, discountPrice){
+Calculator.prototype.actualMoney = function(booklist, discountPrice){
   return this.totalMoney(booklist) - discountPrice;
 };
 
-module.exports = Money;
+module.exports = Calculator;

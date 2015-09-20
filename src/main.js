@@ -1,5 +1,5 @@
 var Cart = require('./cart');
-var Money = require('./money');
+var Calculator = require('./calculator');
 var DiscountPlan = require('./discountPlan');
 
 function harryPotter(input) {
@@ -10,8 +10,8 @@ function harryPotter(input) {
   var plan = discountPlan.group(booklist);
 
   var discountPrice = discountPlan.calculate();
-  var money = new Money();
-  var actualMoney = money.actualMoney(booklist, discountPrice);
+  var calculator = new Calculator();
+  var actualMoney = calculator.actualMoney(booklist, discountPrice);
 
   return actualMoney;
 }
