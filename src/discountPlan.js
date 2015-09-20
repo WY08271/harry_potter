@@ -1,6 +1,6 @@
 var DiscountRate = require('./discountRate');
 
-function DiscountPlan(plan) {
+function DiscountPlan() {
   this.plan = [];
 }
 
