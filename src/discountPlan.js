@@ -3,7 +3,7 @@ function DiscountPlan(plan) {
 }
 
 DiscountPlan.prototype.group = function(booklist) {
-  this.arrays(this.maxCount(booklist));
+  this.createArrays(this.maxCount(booklist));
 
   for (var i = 0; i < booklist.length; i++) {
     if (booklist[i].count > 1) {
@@ -16,7 +16,7 @@ DiscountPlan.prototype.group = function(booklist) {
   return this.plan;
 };
 
-DiscountPlan.prototype.arrays = function(max) {
+DiscountPlan.prototype.createArrays = function(max) {
   for (var i = 0; i < max; i++) {
     this.plan[i] = [];
   }
