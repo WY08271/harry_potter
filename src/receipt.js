@@ -5,11 +5,11 @@ function Receipt () {
 }
 
 Receipt.prototype.printReceipt = function (booklist, plan){
-  var string = '书名    ' + '单价    ' + '数量   ' + '\n';
+  var string = '书名    ' + '单价    ' + '数量' + '\n';
   for(var i = 0; i < booklist.length; i++){
     string += booklist[i].name + '  ' +
-              booklist[i].price + '  ' +
-              booklist[i].count + '\n';
+              booklist[i].price +'  ' +
+              booklist[i].count +'\n';
   }
 
   var discountPlan = new DiscountPlan();
