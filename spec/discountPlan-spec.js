@@ -27,7 +27,7 @@ describe('DiscountPlan', function() {
                       {name : 'harry-potter-two', price : 8.00, count : 2}];
       discountPlan.group(booklist);
 
-      expect(discountPlan.calculate()).toBe(23.2);
+      expect(discountPlan.calculate()).toBe(0.8);
     });
   });
 });
