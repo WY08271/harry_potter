@@ -1,6 +1,6 @@
 var Book = require('./book');
 
-function Cart(book, count, booklist) {
+function Cart(book, count) {
   this.book = book || new Book();
   this.count = count || 1;
   this.booklist = [];
