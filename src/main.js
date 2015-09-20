@@ -1,7 +1,6 @@
 var Cart = require('./cart');
 var Money = require('./money');
 var DiscountPlan = require('./discountPlan');
-var Receipt = require('./receipt');
 
 function harryPotter(input) {
   var cart = new Cart();
@@ -13,8 +12,6 @@ function harryPotter(input) {
   var discountPrice = discountPlan.calculate();
   var money = new Money();
   var actualMoney = money.actualMoney(booklist, discountPrice);
-  var receipt = new Receipt();
-  var string = receipt.printReceipt(booklist, plan);
 
   return actualMoney;
 }

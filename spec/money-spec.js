@@ -45,7 +45,7 @@ describe('Money', function() {
       }];
       var totalMoney = money.totalMoney(input);
 
-      expect(money.actualMoney(totalMoney, 10)).toBe(14);
+      expect(money.actualMoney(input, 10)).toBe(14);
     });
   });
 });

@@ -10,32 +10,12 @@ describe('DiscountPlan', function() {
 
   describe('#group()', function() {
     it('to book group', function() {
-      var booklist = [{
-        name: 'harry-potter-one',
-        price: 8.00,
-        count: 1
-      }, {
-        name: 'harry-potter-two',
-        price: 8.00,
-        count: 2
-      }];
+      var booklist = [{name : 'harry-potter-one', price : 8.00, count : 1},
+                      {name : 'harry-potter-two', price : 8.00, count : 2}];
       var result = discountPlan.group(booklist);
-      var expectResult = [
-        [{
-          name: 'harry-potter-one',
-          price: 8.00,
-          count: 1
-        }, {
-          name: 'harry-potter-two',
-          price: 8.00,
-          count: 2
-        }],
-        [{
-          name: 'harry-potter-two',
-          price: 8.00,
-          count: 2
-        }]
-      ];
+      var expectResult = [[{name : 'harry-potter-one', price : 8.00, count : 1},
+                      {name : 'harry-potter-two', price : 8.00, count : 2}],
+                      [{name : 'harry-potter-two', price : 8.00, count : 2}]];
 
       expect(result).toEqual(expectResult);
     });
@@ -43,15 +23,8 @@ describe('DiscountPlan', function() {
 
   describe('#calculate()', function() {
     it('can calculate the discount of books', function() {
-      var booklist = [{
-        name: 'harry-potter-one',
-        price: 8.00,
-        count: 1
-      }, {
-        name: 'harry-potter-two',
-        price: 8.00,
-        count: 2
-      }];
+      var booklist = [{name : 'harry-potter-one', price : 8.00, count : 1},
+                      {name : 'harry-potter-two', price : 8.00, count : 2}];
       discountPlan.group(booklist);
 
       expect(discountPlan.calculate()).toBe(0.8);
