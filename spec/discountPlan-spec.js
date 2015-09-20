@@ -26,7 +26,7 @@ describe('DiscountPlan', function() {
       var booklist = [{name : 'harry-potter-one', price : 8.00, count : 1},
                       {name : 'harry-potter-two', price : 8.00, count : 2}];
       discountPlan.group(booklist);
-
+      
       expect(discountPlan.calculate()).toBe(0.8);
     });
   });

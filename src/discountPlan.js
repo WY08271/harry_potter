@@ -1,3 +1,5 @@
+var DiscountRate = require('./discountRate');
+
 function DiscountPlan(plan) {
   this.plan = [];
 }
@@ -62,16 +64,17 @@ DiscountPlan.prototype.getDiscountPrice = function(discount, item) {
 };
 
 DiscountPlan.prototype.selection = function(item) {
+  var discountRate = new DiscountRate();
   if (item === 2) {
-    return 0.05;
+    return discountRate.findRate('TYPE_TWO');
   } else if (item === 3) {
-    return 0.1;
+    return discountRate.findRate('TYPE_THREE');
   } else if (item === 4) {
-    return 0.2;
+    return discountRate.findRate('TYPE_FOUR');
   } else if (item === 5) {
-    return 0.25;
+    return discountRate.findRate('TYPE_FIVE');
   } else if (item === 1) {
-    return 0;
+    return discountRate.findRate('TYPE_ONE');
   }
 };
 
