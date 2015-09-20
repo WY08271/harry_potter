@@ -3,7 +3,7 @@ var Money = require('./money');
 var DiscountPlan = require('./discountPlan');
 var Receipt = require('./receipt');
 
-function harryPotter(input){
+function harryPotter(input) {
   var cart = new Cart();
   var booklist = cart.getCount(input);
 
